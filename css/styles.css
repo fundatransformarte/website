@@ -71,7 +71,7 @@ nav ul li a:hover {
 
 /* Spotlight Section */
 .spotlight {
-  background-color: #252F46;
+  background: url('../img/spotlight-bg.jpeg') center/cover no-repeat;
   height: 35rem;
   display: flex;
   align-items: center;
