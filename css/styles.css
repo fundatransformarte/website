@@ -1,3 +1,15 @@
+:root {
+  --primary: #2B4D87;
+  --secondary: #EB3A91;
+  --accent-yellow: #FCE62F;
+  --orange: #F08E33;
+  --green: #31AD4D;
+  --sky: #00B5E2;
+  --text-main: #2E2E2E;
+  --light: #FAFAFA;
+  --white: #FFFFFF;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -9,15 +21,19 @@ body {
   display: none;
 }
 
+h2 {
+  color: var(--primary);
+}
+
 /* Header */
 header {
-  background-color: #fff;
+  background-color: var(--white);
   padding: 1rem 0;
 }
 
 .header-top-bar {
-  background-color: #252F46;
-  color: white;
+  background-color: var(--accent-yellow);
+  color: var(--primary);
   padding: 0.5rem 0;
   text-align: center;
   font-size: 0.9rem;
@@ -61,8 +77,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #252F46;
-  font-weight: bold;
+  color: var(--text-main);
 }
 
 nav ul li a:hover {
@@ -76,20 +91,26 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 2rem;
+}
+
+.spotlight p {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  font-size: 1.5rem;
+  padding: .5rem;
   text-align: center;
 }
 
 /* About Section */
 .about {
+  background-color: var(--light);
   padding: 3rem 1rem;
   text-align: center;
 }
 
 /* Footer */
 footer {
-  background-color: #252F46;
+  background-color: var(--primary);
   color: white;
   padding: 2rem 1rem;
 }
