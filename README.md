@@ -1,5 +1,5 @@
-# Multiactive Foundation TransformArte
-This project is the official website of Fundación Multiactiva TransformArte, a non-profit organization dedicated to transforming lives through art, music, and education.
+# TransformArte Multiactive Foundation
+This project is the official website of TransformArte Multiactive Foundation, a non-profit organization dedicated to transforming lives through art, music, and education.
 
 ## How to Contribute
 1. Clone this repository:
