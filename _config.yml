@@ -1,0 +1,39 @@
+title: "Fundación Multiactiva TransformArte"
+description: "Transformando vidas a través del arte y la educación"
+baseurl: ""
+url: ""
+
+contact:
+  phone: "305 431 4805"
+  email: "fumtransformarte@gmail.com"
+  address: "Carrera 12 A # 77A - 113, Piso 1"
+  whatsapp: "573054314805"
+  whatsapp_url: "https://wa.me/573054314805"
+
+social:
+  instagram: "https://www.instagram.com/fundatransformarte"
+  linkedin: "https://www.linkedin.com/in/fundación-multiactiva-transformarte-636a35355/"
+  youtube: "https://www.youtube.com/@FundaciónMultiactivaTransforma"
+
+volunteer_form: "https://docs.google.com/forms/d/e/1FAIpQLSfRKbkx5uIie2RNg1IJGofXKaMPK9xBwIRMn2N5HiMuF8BPaA/viewform?usp=header"
+
+navigation:
+  - title: "Inicio"
+    url: "/"
+  - title: "Quiénes Somos"
+    url: "/#about"
+  - title: "Voluntariado"
+    url: "/voluntariado"
+  - title: "Contáctanos"
+    url: "/#contact"
+
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  sass_dir: assets/css
+  style: compressed
