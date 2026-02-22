@@ -5,12 +5,12 @@
     <div class="testimonials-grid">
       {% for beneficiario in site.data.beneficiaries limit: 4 %}
       <article class="testimonial-card">
-        <img class="testimonial-avatar" src="{{ beneficiario.image | relative_url }}"
-          alt="Foto de {{ beneficiario.name }}" width="80" height="80" loading="lazy">
-        <div class="testimonial-body">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="{{ beneficiario.image | relative_url }}"
+            alt="Foto de {{ beneficiario.name }}" width="80" height="80" loading="lazy">
           <h3 class="testimonial-name">{{ beneficiario.name }}</h3>
-          <p class="testimonial-text">{{ beneficiario.comment }}</p>
         </div>
+        <p class="testimonial-text">{{ beneficiario.comment }}</p>
       </article>
       {% endfor %}
     </div>
