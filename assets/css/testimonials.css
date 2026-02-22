@@ -1,0 +1,163 @@
+/* ===========================
+   Testimonials / Beneficiaries
+   =========================== */
+
+/* --- Shared card styles --- */
+.testimonial-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background-color: var(--white);
+  border-left: 4px solid var(--secondary);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Circle profile image --- */
+.testimonial-avatar {
+  flex-shrink: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary);
+  background-color: var(--light);
+  /* Fallback placeholder when no image is provided */
+  background-image: url('/assets/img/beneficiaries/placeholder.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- Card body --- */
+.testimonial-body {
+  flex: 1;
+}
+
+.testimonial-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+.testimonial-text::before {
+  content: '\201C';
+  color: var(--secondary);
+  font-size: 1.4rem;
+  line-height: 0;
+  vertical-align: -0.3em;
+  margin-right: 0.15rem;
+}
+
+.testimonial-text::after {
+  content: '\201D';
+  color: var(--secondary);
+  font-size: 1.4rem;
+  line-height: 0;
+  vertical-align: -0.3em;
+  margin-left: 0.15rem;
+}
+
+/* ===========================
+   Section wrapper (index preview)
+   =========================== */
+.testimonials-section {
+  background-color: var(--light);
+  padding: 3rem 1rem;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.testimonials-see-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-see-all {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-see-all:hover {
+  background-color: var(--primary);
+}
+
+/* ===========================
+   Full testimonials page
+   =========================== */
+.testimonials-page {
+  padding: 3rem 1rem;
+}
+
+.testimonials-page h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials-page .page-intro {
+  text-align: center;
+  color: var(--text-main);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.testimonials-page .testimonials-grid {
+  gap: 2rem;
+}
+
+/* Full-page card shows more text naturally */
+.testimonials-page .testimonial-text {
+  font-size: 1.02rem;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media screen and (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-avatar {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonials-page .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1100px;
+  }
+}
