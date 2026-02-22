@@ -1,0 +1,24 @@
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <h2>Lo que dicen nuestros beneficiarios</h2>
+
+    <div class="testimonials-grid">
+      {% for beneficiario in site.data.beneficiaries limit: 4 %}
+      <article class="testimonial-card">
+        <img class="testimonial-avatar" src="{{ beneficiario.image | relative_url }}"
+          alt="Foto de {{ beneficiario.name }}" width="80" height="80" loading="lazy">
+        <div class="testimonial-body">
+          <h3 class="testimonial-name">{{ beneficiario.name }}</h3>
+          <p class="testimonial-text">{{ beneficiario.comment }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="testimonials-see-all">
+      <a href="{{ '/testimonials/' | relative_url }}" class="btn-see-all">
+        Ver todos los comentarios
+      </a>
+    </div>
+  </div>
+</section>
