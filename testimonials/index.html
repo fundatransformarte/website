@@ -1,0 +1,32 @@
+---
+layout: testimonials
+title: Testimonios
+description: Conoce las experiencias y comentarios de los beneficiarios de la Fundación Transformarte y el programa Ciudad del Arte.
+custom_css:
+  - /assets/css/testimonials.css
+---
+
+<h1>Testimonios</h1>
+<p class="page-intro">
+  Estas son las voces de quienes han vivido de cerca la magia de Ciudad del Arte.
+  Sus experiencias nos inspiran a seguir transformando vidas a través del arte y la educación.
+</p>
+
+<div class="testimonials-grid">
+  {% for beneficiario in site.data.beneficiaries %}
+  <article class="testimonial-card">
+    <img
+      class="testimonial-avatar"
+      src="{{ beneficiario.image | relative_url }}"
+      alt="Foto de {{ beneficiario.name }}"
+      width="88"
+      height="88"
+      loading="lazy"
+    >
+    <div class="testimonial-body">
+      <h2 class="testimonial-name">{{ beneficiario.name }}</h2>
+      <p class="testimonial-text">{{ beneficiario.comment }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
