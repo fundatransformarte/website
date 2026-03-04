@@ -24,6 +24,8 @@ navigation:
     url: "/#about"
   - title: "Voluntariado"
     url: "/voluntariado"
+  - title: "Informes"
+    url: "/informe-gestion"
   - title: "Contáctanos"
     url: "/#contact"
 
