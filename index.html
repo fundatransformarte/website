@@ -3,6 +3,7 @@ layout: default
 title: Inicio
 description: Transformando vidas a través del arte y la educación
 custom_css:
+  - /assets/css/quienes-somos.css
   - /assets/css/testimonials.css
 ---
 
@@ -10,9 +11,6 @@ custom_css:
   <p>{{ site.description }}</p>
 </section>
 
-<section class="about" id="about">
-  <h2>¿Quiénes Somos?</h2>
-  <p>Somos una fundación sin ánimo de lucro que busca transformar la vida de las personas.</p>
-</section>
+{% include about-preview.html %}
 
 {% include testimonials-preview.html %}
