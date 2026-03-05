@@ -24,7 +24,7 @@ navigation:
   - title: "Inicio"
     url: "/"
   - title: "Quiénes Somos"
-    url: "/#about"
+    url: "/quienes-somos"
   - title: "Voluntariado"
     url: "/voluntariado"
   - title: "Aliados"

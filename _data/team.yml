@@ -1,0 +1,15 @@
+- name: "Maria A. Mendoza"
+  role: "Gerente"
+  image: "/assets/img/team/maria-mendoza.jpeg"
+
+- name: "Margarita Roca"
+  role: "Subgerente"
+  image: "/assets/img/team/margarita-roca.jpeg"
+
+- name: "Elys Van Strahalen"
+  role: "Administrativa"
+  image: "/assets/img/team/elys-van-strahalen.jpeg"
+
+- name: "Ivan Llanos"
+  role: "Gestor Cultural"
+  image: "/assets/img/team/ivan-llanos.jpeg"

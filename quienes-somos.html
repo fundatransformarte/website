@@ -1,0 +1,59 @@
+---
+layout: default
+title: Quiénes Somos
+description: Conoce la misión, visión, historia y equipo de Fundación Transformarte
+permalink: /quienes-somos/
+custom_css:
+  - /assets/css/quienes-somos.css
+---
+
+<section class="about-header">
+  <h1>¿Quiénes Somos?</h1>
+</section>
+
+<main class="about-page">
+  <section class="mission-vision">
+    <div class="mv-card">
+      <h2>🎯 Misión</h2>
+      <p>Contribuir a la restitución de derechos de comunidades vulnerables y el empoderamiento de las personas,
+        utilizando la cultura musical y artística como principal recurso pedagógico, logrando un impacto positivo en su
+        calidad de vida.</p>
+    </div>
+    <div class="mv-card">
+      <h2>🌟 Visión</h2>
+      <p>Nuestro mayor anhelo es contribuir al desarrollo colectivo de nuestro entorno, partiendo por el mejoramiento de
+        la calidad de vida de las comunidades vulnerables.</p>
+    </div>
+  </section>
+
+  <section class="our-history">
+    <h2>📖 Nuestra Historia</h2>
+    <p>La Fundación Multiactiva Transformarte nació el 26 de enero de 2023 en Soledad, Atlántico, inspirada por la
+      convicción de que el arte tiene el poder de transformar vidas. Comenzamos desarrollando actividades de iniciación
+      musical en centros de desarrollo infantil de Soledad y Sabanalarga, y capacitando a docentes de primera infancia en
+      fundamentos musicales para integrar la música en la planeación pedagógica.</p>
+    <p>Con el tiempo, ampliamos nuestra propuesta y nuestro alcance. Integramos nuevas disciplinas como la actuación, el
+      baile, la escritura y la oralidad, incorporando también actividades con enfoque recreativo, donde el juego se
+      convierte en un canal de aprendizaje, expresión y bienestar.</p>
+    <p>Hoy además de ampliar nuestro trabajo con la primera infancia en otros municipios del Atlántico, acompañamos a
+      niños y jóvenes entre 6 y 17 años en Soledad, con propuestas artísticas y educativas que fortalecen sus talentos y
+      habilidades.</p>
+    <p>Nuestra misión sigue intacta: contribuir a la restitución de derechos y al empoderamiento de comunidades
+      vulnerables a través de la cultura, la recreación y la educación. Cada paso que damos reafirma nuestra visión de un
+      futuro donde el arte sea motor de desarrollo, transformación y esperanza.</p>
+  </section>
+
+  <section class="team">
+    <h2>👥 Nuestro Equipo</h2>
+    <div class="team-grid">
+      {% for member in site.data.team %}
+      <div class="team-member">
+        <img class="team-photo" src="{{ member.image | relative_url }}" alt="Foto de {{ member.name }}" width="150"
+          height="150" loading="lazy">
+        <h3 class="team-name">{{ member.name }}</h3>
+        <p class="team-role">{{ member.role }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</main>
