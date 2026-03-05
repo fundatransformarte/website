@@ -17,6 +17,9 @@ social:
 
 volunteer_form: "https://docs.google.com/forms/d/e/1FAIpQLSfRKbkx5uIie2RNg1IJGofXKaMPK9xBwIRMn2N5HiMuF8BPaA/viewform?usp=header"
 
+donations_online_url: "https://vaki.co/es/vaki/pequenos-y-grandes-artistas?utm_source=copy&utm_medium=vaki-page&utm_campaign=v4"
+donations_materials_form: "https://docs.google.com/forms/d/e/1FAIpQLScSiL2yJ-pwE7YeRzKovK56lELxtJr1R_2zKzA7rPTtYBgOMw/viewform?usp=header"
+
 navigation:
   - title: "Inicio"
     url: "/"
@@ -24,6 +27,8 @@ navigation:
     url: "/#about"
   - title: "Voluntariado"
     url: "/voluntariado"
+  - title: "Aliados"
+    url: "/aliados"
   - title: "Informes"
     url: "/informe-gestion"
   - title: "Contáctanos"
