@@ -4,17 +4,17 @@ title: Informes de Gestión
 description: Documentos oficiales del informe de gestión anual de la Fundación Multiactiva TransformArte
 permalink: /informe-gestion/
 custom_css:
-  - /assets/css/informe-gestion.css
+  - /assets/css/management-report.css
 ---
 
-<section class="informes-header">
+<section class="reports-header">
   <h1>📋 Informes de Gestión</h1>
   <p>Documentos oficiales de gestión anual de la Fundación. Aquí encontrarás los archivos publicados por año, disponibles para descarga.</p>
 </section>
 
-<div class="informes-container">
-  <div class="informes-grid">
-    {% for informe in site.data.informes %}
+<div class="reports-container">
+  <div class="reports-grid">
+    {% for informe in site.data.reports %}
     <div class="year-card">
       <div class="year-card-header">
         <span class="year-badge">{{ informe.year }}</span>
@@ -35,7 +35,7 @@ custom_css:
           </div>
           {% if doc.file %}
           <a class="doc-download"
-             href="{{ '/assets/docs/informes/' | append: informe.year | append: '/' | append: doc.file | relative_url }}"
+             href="{{ '/assets/docs/reports/' | append: informe.year | append: '/' | append: doc.file | relative_url }}"
              download
              aria-label="Descargar {{ doc.title }}">
             <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

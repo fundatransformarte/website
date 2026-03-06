@@ -1,30 +1,30 @@
-.informes-header {
+.reports-header {
   background: linear-gradient(135deg, var(--primary) 0%, #1a3566 100%);
   color: var(--white);
   padding: 3rem 1rem;
   text-align: center;
 }
 
-.informes-header h1 {
+.reports-header h1 {
   font-size: 2rem;
   margin: 0 0 0.75rem;
   font-weight: 700;
 }
 
-.informes-header p {
+.reports-header p {
   font-size: 1rem;
   margin: 0 auto;
   max-width: 600px;
   opacity: 0.9;
 }
 
-.informes-container {
+.reports-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 2.5rem 1rem 4rem;
 }
 
-.informes-grid {
+.reports-grid {
   display: grid;
   gap: 2rem;
 }
@@ -157,7 +157,7 @@
 }
 
 @media (min-width: 700px) {
-  .informes-header h1 {
+  .reports-header h1 {
     font-size: 2.4rem;
   }
 
