@@ -1,13 +1,13 @@
 <footer id="contact">
   <div class="container">
+    <h2>Contáctanos</h2>
     <div class="footer-content">
-      <h2>Contáctanos</h2>
       <div class="social-media">
         <h3>Redes Sociales</h3>
         <ul>
-          <li><a href="{{ site.social.instagram }}" target="_blank">Instagram</a></li>
-          <li><a href="{{ site.social.linkedin }}" target="_blank">LinkedIn</a></li>
-          <li><a href="{{ site.social.youtube }}" target="_blank">YouTube</a></li>
+          <li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer">YouTube</a></li>
         </ul>
       </div>
       <div class="contact-information">
@@ -15,11 +15,12 @@
         <p>{{ site.contact.phone }}</p>
         <p>{{ site.contact.address }}</p>
         <p>{{ site.contact.email }}</p>
-        <p><a href="{{ site.contact.whatsapp_url }}">¡Escríbenos por WhatsApp!</a></p>
+        <p><a href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener noreferrer">¡Escríbenos por WhatsApp!</a></p>
       </div>
       <div class="donation">
         <h3>Donaciones</h3>
         <p>¡Apóyanos en nuestra campaña de donación!</p>
+        <p><a href="{{ site.donations_online_url }}" target="_blank" rel="noopener noreferrer">Donar ahora</a></p>
       </div>
     </div>
   </div>

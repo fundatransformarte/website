@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header-content">
       <a href="{{ '/' | relative_url }}">
-        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="logo foundation" class="logo">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo de {{ site.title }}" class="logo">
       </a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
         <span></span>
@@ -12,7 +12,12 @@
       <nav id="main-nav">
         <ul>
           {% for item in site.navigation %}
+          {% assign item_url_trailing = item.url | append: '/' %}
+          {% if page.url == item.url or page.url == item_url_trailing %}
+          <li><a href="{{ item.url | relative_url }}" class="nav-active" aria-current="page">{{ item.title }}</a></li>
+          {% else %}
           <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endif %}
           {% endfor %}
         </ul>
       </nav>
