@@ -263,6 +263,43 @@ footer ul li {
   top: 0.5rem;
 }
 
+/* 404 page */
+.error-page {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.error-page h1 {
+  font-size: 6rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.error-page h2 {
+  color: var(--secondary);
+}
+
+.error-page p {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.error-page-link {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.error-page-link:hover {
+  background-color: var(--secondary);
+}
+
 /* Responsive Design */
 @media screen and (min-width: 768px) {
   .nav-toggle {
