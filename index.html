@@ -8,7 +8,11 @@ custom_css:
 ---
 
 <section class="spotlight">
-  <p>{{ site.description }}</p>
+  <div class="spotlight-content">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+    <a href="{{ '/quienes-somos/' | relative_url }}" class="spotlight-cta">Conoce nuestra historia</a>
+  </div>
 </section>
 
 {% include about-preview.html %}
