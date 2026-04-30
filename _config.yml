@@ -1,5 +1,5 @@
 title: "Fundación Multiactiva TransformArte"
-description: "Transformando vidas a través del arte y la educación"
+description: "Transformamos vidas a través del arte y la educación en la costa caribe colombiana."
 baseurl: ""
 url: ""
 
@@ -7,6 +7,7 @@ contact:
   phone: "305 431 4805"
   email: "fumtransformarte@gmail.com"
   address: "Carrera 12 A # 77A - 113, Piso 1"
+  city: "Barranquilla, Atlántico"
   whatsapp: "573054314805"
   whatsapp_url: "https://wa.me/573054314805"
 
@@ -16,30 +17,45 @@ social:
   youtube: "https://www.youtube.com/@FundaciónMultiactivaTransforma"
 
 volunteer_form: "https://docs.google.com/forms/d/e/1FAIpQLSfRKbkx5uIie2RNg1IJGofXKaMPK9xBwIRMn2N5HiMuF8BPaA/viewform?usp=header"
-
 donations_online_url: "https://vaki.co/es/vaki/pequenos-y-grandes-artistas?utm_source=copy&utm_medium=vaki-page&utm_campaign=v4"
 donations_materials_form: "https://docs.google.com/forms/d/e/1FAIpQLScSiL2yJ-pwE7YeRzKovK56lELxtJr1R_2zKzA7rPTtYBgOMw/viewform?usp=header"
 
 navigation:
   - title: "Inicio"
     url: "/"
-  - title: "Quiénes Somos"
-    url: "/quienes-somos"
+  - title: "Quiénes somos"
+    url: "/quienes-somos/"
+  - title: "Programas"
+    url: "/#programs"
   - title: "Voluntariado"
-    url: "/voluntariado"
+    url: "/voluntariado/"
   - title: "Aliados"
-    url: "/aliados"
+    url: "/aliados/"
   - title: "Informes"
-    url: "/informe-gestion"
-  - title: "Contáctanos"
-    url: "/#contact"
+    url: "/informe-gestion/"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 markdown: kramdown
 permalink: pretty
+
 exclude:
   - README.md
+  - README-redesign.md
   - Gemfile
   - Gemfile.lock
+  - vendor
+
+include:
+  - assets/css/_tokens.css
+  - assets/css/_base.css
+  - assets/css/_components.css
+  - assets/css/_layout.css
+  - assets/css/_home.css
+  - assets/css/_pages.css
 
 sass:
   sass_dir: assets/css
