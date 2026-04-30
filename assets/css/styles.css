@@ -4,9 +4,9 @@
      tokens → base → components → layout → home → pages
    ========================================================= */
 
-@import url("_tokens.css");
-@import url("_base.css");
-@import url("_components.css");
-@import url("_layout.css");
-@import url("_home.css");
-@import url("_pages.css");
+@import url("tokens.css");
+@import url("base.css");
+@import url("components.css");
+@import url("layout.css");
+@import url("home.css");
+@import url("pages.css");
