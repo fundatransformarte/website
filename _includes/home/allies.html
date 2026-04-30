@@ -1,0 +1,19 @@
+<section class="section allies" id="allies">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:40px">
+      <div>
+        <div class="eyebrow">Aliados</div>
+        <h2 style="margin-top:20px">Quienes nos acompañan.</h2>
+      </div>
+      <div class="lede">
+        Organizaciones públicas, privadas y comunitarias que hacen posible cada temporada de <em>Ciudad del Arte</em> y nuestros programas en territorio.
+      </div>
+    </div>
+
+    <div class="allies-row">
+      {% for a in site.data.allies %}
+      <div class="ally">{{ a.name }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,41 +1,50 @@
 ---
 layout: default
 title: Voluntariado
-description: Únete como voluntario y transforma vidas con nosotros
+description: Únete como voluntario y transforma vidas con nosotros.
 permalink: /voluntariado/
-custom_css:
-- /assets/css/volunteer.css
 ---
 
-<section class="volunteer-header">
-  <h1>¡Únete como voluntario y transforma vidas con nosotros!</h1>
+<section class="page-header">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Voluntariado</div>
+      <h1>Únete y <span class="highlight">transforma vidas</span> con nosotros.</h1>
+    </div>
+    <div class="lede">
+      Ser voluntario en Fundación TransformArte es mucho más que ayudar: es conectar con historias, sembrar esperanza y construir un mundo mejor a través del arte, la música y la educación.
+    </div>
+  </div>
 </section>
 
-<main class="volunteer-page">
-  <p>Ser voluntario en <strong>Fundación Transformarte</strong> es mucho más que ayudar: es conectar con historias,
-    sembrar esperanza y construir un mundo mejor a través del arte, la música y la educación. Es compartir tu tiempo y
-    talento con niños, jóvenes y comunidades que sueñan con un futuro diferente.</p>
+<section class="volunteer-content">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Cómo apoyar</div>
+        <h2 style="margin-top:18px">Actividades en las que puedes aportar.</h2>
+      </div>
+      <div class="lede">Compartes tu tiempo y talento con niños, jóvenes y comunidades que sueñan con un futuro diferente. Cada gesto cuenta.</div>
+    </div>
 
-  <h2>🎨 ¿Qué actividades puedes realizar como voluntario?</h2>
-  <ul>
-    <li>Apoyar talleres artísticos (música, danza, teatro, artes).</li>
-    <li>Acompañar ensayos y presentaciones.</li>
-    <li>Crear materiales didácticos y escenografías.</li>
-    <li>Tomar fotos y videos de las actividades.</li>
-    <li>Redactar contenidos para publicaciones.</li>
-    <li>Diseñar piezas gráficas y apoyar en redes sociales.</li>
-    <li>Montar espacios para eventos y actividades.</li>
-    <li>Entregar refrigerios, materiales y kits pedagógicos.</li>
-    <li>Apoyar convocatorias y bases de datos.</li>
-    <li>Brindar clases o asesorías según tu experiencia.</li>
-  </ul>
-
-  <p>Te invitamos a ser parte de esta gran familia, donde cada gesto cuenta y cada sonrisa nos recuerda que el amor se
-    multiplica cuando se comparte.</p>
-
-  <div class="call-to-action">
-    <p><strong>¡Haz parte del cambio! Tu energía puede hacer la diferencia.</strong></p>
-    <p>👉 ¿Listo para transformar y ser transformado?</p>
-    <a href="{{ site.volunteer_form }}" target="_blank" rel="noopener noreferrer">Inscríbete ahora</a>
+    <div class="activity-list">
+      {% for a in site.data.volunteer_activities %}
+      <div class="activity">
+        <div class="num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+        <p>{{ a.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-</main>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.7)">Da el primer paso</div>
+    <h2>¿Listo para transformar y ser transformado?</h2>
+    <p>Te invitamos a ser parte de esta gran familia, donde cada gesto cuenta y cada sonrisa nos recuerda que el amor se multiplica cuando se comparte.</p>
+    <div class="actions">
+      <a class="btn btn-yellow" href="{{ site.volunteer_form }}" target="_blank" rel="noopener noreferrer">Inscríbete ahora <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>

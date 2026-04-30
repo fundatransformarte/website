@@ -1,0 +1,48 @@
+/* =========================================================
+   Tokens — Fundación TransformArte
+   ========================================================= */
+
+:root {
+  /* Anchored palette (default) */
+  --ink: #0F1B2E;
+  --ink-soft: #3A4A63;
+  --cream: #FFFFFF;
+  --cream-2: #F4F6FA;
+  --line: #E6EAF1;
+
+  --blue: #1E4FA3;
+  --blue-deep: #153875;
+  --magenta: #E5189E;
+  --green: #3FB24A;
+  --yellow: #FFD43B;
+  --orange: #F08A1C;
+
+  --primary: var(--blue);
+  --accent: var(--magenta);
+
+  --radius-s: 6px;
+  --radius-m: 14px;
+  --radius-l: 24px;
+
+  --f-display: "Nunito", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --f-ui: "Nunito", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  --pad-block: clamp(64px, 8vw, 128px);
+  --wrap: 1240px;
+}
+
+/* Alternate palettes (future, for switching) */
+body[data-palette="warm"] {
+  --primary: #B4451E;
+  --accent: #E5189E;
+  --cream: #FFFDF8;
+  --cream-2: #FCF3E2;
+  --line: #F0E4CC;
+}
+body[data-palette="serene"] {
+  --primary: #1E4FA3;
+  --accent: #3FB24A;
+  --cream: #FFFFFF;
+  --cream-2: #EEF3FA;
+  --line: #DCE4EF;
+}

@@ -1,0 +1,33 @@
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Fundación sin ánimo de lucro · Atlántico, Colombia</div>
+        <h1 class="hero-title">
+          <span class="row">Transformamos</span>
+          <span class="row">vidas a través</span>
+          <span class="row">del <span class="art-mark">arte</span> y la <span class="italic-bit serif-italic">educación</span>.</span>
+        </h1>
+        <p class="hero-lede">
+          Usamos la música, la pintura y la pedagogía como herramientas para devolver derechos y oportunidades a niñas, niños y comunidades vulnerables de la costa caribe colombiana.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="{{ site.donations_online_url }}" target="_blank" rel="noopener noreferrer">Apoyar con una donación <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="{{ '/quienes-somos/' | relative_url }}">Conoce nuestra historia</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="tag"><span class="dot"></span> Ciudad del Arte · Temporada 2026</div>
+        <img
+          src="{{ '/assets/img/hero/ciudad-del-arte-1200.webp' | relative_url }}"
+          srcset="{{ '/assets/img/hero/ciudad-del-arte-800.webp'  | relative_url }} 800w,
+                  {{ '/assets/img/hero/ciudad-del-arte-1200.webp' | relative_url }} 1200w"
+          sizes="(max-width: 820px) 100vw, 48vw"
+          width="1200" height="900"
+          alt="Comunidad reunida bajo banderines de colores en una jornada de Ciudad del Arte"
+          fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
