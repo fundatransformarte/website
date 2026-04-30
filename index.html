@@ -1,20 +1,16 @@
 ---
 layout: default
 title: Inicio
-description: Transformando vidas a través del arte y la educación
-custom_css:
-  - /assets/css/about-us.css
-  - /assets/css/testimonials.css
+description: Transformamos vidas a través del arte y la educación en la costa caribe colombiana.
 ---
 
-<section class="spotlight">
-  <div class="spotlight-content">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-    <a href="{{ '/quienes-somos/' | relative_url }}" class="spotlight-cta">Conoce nuestra historia</a>
-  </div>
-</section>
-
-{% include about-preview.html %}
-
-{% include testimonials-preview.html %}
+{% include home/hero.html %}
+{% include home/marquee.html %}
+{% include home/pillars.html %}
+{% include home/impact.html %}
+{% include home/programs.html %}
+{% include home/testimonials.html %}
+{% include home/gallery.html %}
+{% include home/volunteer-cta.html %}
+{% include home/allies.html %}
+{% include home/donate.html %}

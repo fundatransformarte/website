@@ -1,0 +1,23 @@
+{% assign d = site.data.impact %}
+<section class="impact" id="impact">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0">
+      <div>
+        <div class="eyebrow">{{ d.eyebrow }}</div>
+        <h2 style="margin-top:20px">{{ d.title }}</h2>
+      </div>
+      <div class="lede" style="color:rgba(255,255,255,0.7)">
+        {{ d.lede }}
+      </div>
+    </div>
+
+    <div class="impact-grid">
+      {% for c in d.cells %}
+      <div class="impact-cell">
+        <div class="impact-num">{{ c.number }}{% if c.suffix %}<span class="small">{{ c.suffix }}</span>{% endif %}</div>
+        <div class="impact-label">{{ c.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

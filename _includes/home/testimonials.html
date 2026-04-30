@@ -1,0 +1,41 @@
+<section class="section testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Voces del programa</div>
+        <h2 style="margin-top:20px">Lo que dicen nuestros beneficiarios.</h2>
+      </div>
+      <div class="lede">
+        Las historias de quienes han pasado por Ciudad del Arte son el mejor testimonio de lo que es posible cuando una comunidad se organiza alrededor de lo que ama.
+      </div>
+    </div>
+
+    {% assign main = site.data.beneficiaries[0] %}
+    <div class="test-grid">
+      <div>
+        <blockquote class="test-quote" id="mainQuote">{{ main.comment | strip_newlines }}</blockquote>
+        <div class="test-attr">
+          <div class="avatar" id="mainAvatar">
+            {% if main.image %}<img src="{{ main.image | relative_url }}" alt="{{ main.name }}">{% else %}{{ main.name | slice: 0, 1 }}{% endif %}
+          </div>
+          <div class="who">
+            <div class="name" id="mainName">{{ main.name }}</div>
+            <div class="role" id="mainRole">Participante · Ciudad del Arte</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-side" id="testSide">
+        {% for b in site.data.beneficiaries offset: 1 limit: 3 %}
+        <div class="test-mini{% if forloop.first %} active{% endif %}" data-i="{{ forloop.index0 }}"
+             data-name="{{ b.name }}"
+             data-image="{% if b.image %}{{ b.image | relative_url }}{% endif %}"
+             data-quote="{{ b.comment | strip_newlines | escape }}">
+          <p>{{ b.comment | strip_newlines | truncate: 200 }}</p>
+          <div class="mini-attr">{{ b.name }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

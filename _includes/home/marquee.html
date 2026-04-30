@@ -1,0 +1,7 @@
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    {% assign values = "Música,Pintura,Pedagogía,Restitución de derechos,Comunidad,Infancia,Arte del caribe,Oportunidades" | split: "," %}
+    {% for v in values %}<span>{{ v }} <span class="star">✦</span></span>{% endfor %}
+    {% for v in values %}<span>{{ v }} <span class="star">✦</span></span>{% endfor %}
+  </div>
+</div>

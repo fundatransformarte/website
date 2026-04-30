@@ -1,0 +1,31 @@
+<section class="section" id="programs">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Lo que hacemos</div>
+        <h2 style="margin-top:20px">Programas activos.</h2>
+      </div>
+      <div class="lede">
+        Cada programa aborda una dimensión distinta del desarrollo comunitario desde el arte: la formación infantil, el fortalecimiento de talentos jóvenes y las intervenciones culturales en territorio.
+      </div>
+    </div>
+
+    <div class="programs">
+      {% for p in site.data.programs %}
+      <article class="program {{ p.slug }}">
+        <div class="cover">
+          <div class="ph">[ {{ p.cover_alt }} ]</div>
+          <div class="chip">{{ p.tag }}</div>
+        </div>
+        <div class="body">
+          <h3>{{ p.title }}</h3>
+          <p class="desc">{{ p.description }}</p>
+          <div class="meta">
+            {% for m in p.meta %}<span><strong>{{ m.value }}</strong> {{ m.label }}</span>{% endfor %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
