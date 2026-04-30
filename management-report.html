@@ -1,57 +1,61 @@
 ---
 layout: default
-title: Informes de Gestión
-description: Documentos oficiales del informe de gestión anual de la Fundación Multiactiva TransformArte
+title: Informes de gestión
+description: Documentos oficiales del informe de gestión anual de la Fundación Multiactiva TransformArte.
 permalink: /informe-gestion/
-custom_css:
-  - /assets/css/management-report.css
 ---
 
-<section class="reports-header">
-  <h1>📋 Informes de Gestión</h1>
-  <p>Documentos oficiales de gestión anual de la Fundación. Aquí encontrarás los archivos publicados por año, disponibles para descarga.</p>
+<section class="page-header">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Transparencia</div>
+      <h1>Informes de gestión.</h1>
+    </div>
+    <div class="lede">
+      Documentos oficiales de gestión anual de la Fundación. Aquí encontrarás los archivos publicados por año, disponibles para descarga.
+    </div>
+  </div>
 </section>
 
-<div class="reports-container">
-  <div class="reports-grid">
-    {% for informe in site.data.reports %}
-    <div class="year-card">
-      <div class="year-card-header">
-        <span class="year-badge">{{ informe.year }}</span>
-        {% assign docs_count = informe.docs | size %}
-        {% if docs_count == 1 %}
-          <p>1 documento publicado</p>
-        {% else %}
-          <p>{{ docs_count }} documentos publicados</p>
-        {% endif %}
-      </div>
-      <ul class="doc-list">
-        {% for doc in informe.docs %}
-        <li class="doc-item{% unless doc.file %} unavailable{% endunless %}">
-          <span class="doc-icon" aria-hidden="true">📄</span>
-          <div class="doc-info">
-            <p class="doc-title">{{ doc.title }}</p>
-            <p class="doc-description">{{ doc.description }}</p>
-          </div>
-          {% if doc.file %}
-          <a class="doc-download"
-             href="{{ '/assets/docs/reports/' | append: informe.year | append: '/' | append: doc.file | relative_url }}"
-             download
-             aria-label="Descargar {{ doc.title }}">
-            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            Descargar
-          </a>
-          {% else %}
-          <span class="doc-unavailable">Próximamente</span>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
+<section class="reports-content">
+  <div class="wrap">
+    <div class="reports-grid">
+      {% for informe in site.data.reports %}
+      <article class="year-card">
+        <header class="year-card-header">
+          <span class="year-badge">{{ informe.year }}</span>
+          {% assign docs_count = informe.docs | size %}
+          <p>{% if docs_count == 1 %}1 documento publicado{% else %}{{ docs_count }} documentos publicados{% endif %}</p>
+        </header>
+
+        <ul class="doc-list">
+          {% for doc in informe.docs %}
+          <li class="doc-item{% unless doc.file %} unavailable{% endunless %}">
+            <span class="doc-icon" aria-hidden="true">📄</span>
+            <div class="doc-info">
+              <p class="doc-title">{{ doc.title }}</p>
+              <p class="doc-description">{{ doc.description }}</p>
+            </div>
+            {% if doc.file %}
+            <a class="doc-download"
+               href="{{ '/assets/docs/reports/' | append: informe.year | append: '/' | append: doc.file | relative_url }}"
+               download
+               aria-label="Descargar {{ doc.title }}">
+              <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Descargar
+            </a>
+            {% else %}
+            <span class="doc-unavailable">Próximamente</span>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
+</section>
