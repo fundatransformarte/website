@@ -49,14 +49,6 @@ exclude:
   - Gemfile.lock
   - vendor
 
-include:
-  - assets/css/_tokens.css
-  - assets/css/_base.css
-  - assets/css/_components.css
-  - assets/css/_layout.css
-  - assets/css/_home.css
-  - assets/css/_pages.css
-
 sass:
   sass_dir: assets/css
   style: compressed
