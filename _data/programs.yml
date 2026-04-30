@@ -1,0 +1,32 @@
+- title: "Ciudad del Arte"
+  slug: "p1"
+  tag: "Bandera"
+  description: "Programa insignia de talleres gratuitos de música, artes plásticas y literatura para la infancia en barrios vulnerables del Atlántico, con cierre en un gran evento comunitario."
+  meta:
+    - label: "años"
+      value: "6–14"
+    - label: "cupos/año"
+      value: "320"
+  cover_alt: "Taller Ciudad del Arte"
+
+- title: "Semilleros Sonoros"
+  slug: "p2"
+  tag: "Formación"
+  description: "Formación musical continua para jóvenes con énfasis en ritmos del Caribe colombiano. Instrumentos, solfeo, coro y puesta en escena acompañados por maestros aliados."
+  meta:
+    - label: "años"
+      value: "12–22"
+    - label: "semana"
+      value: "1x"
+  cover_alt: "Ensayo banda juvenil"
+
+- title: "Arte en Barrio"
+  slug: "p3"
+  tag: "Comunidad"
+  description: "Intervenciones artísticas en espacios públicos —murales, muestras, ferias— que dignifican el territorio y se construyen en co-creación con las familias del sector."
+  meta:
+    - label: "barrios/año"
+      value: "4"
+    - label: "acceso"
+      value: "Libre"
+  cover_alt: "Mural comunitario"
