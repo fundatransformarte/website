@@ -1,5 +1,12 @@
-<div class="header-top-bar">
-  <span class="hide-on-mobile"><a href="tel:{{ site.contact.phone }}">{{ site.contact.phone }}</a></span>
-  <span class="hide-on-mobile"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></span>
-  <span><a href="{{ site.donations_online_url }}" target="_blank" rel="noopener noreferrer">¡Apóyanos en nuestra campaña de donación!</a></span>
+<div class="utility">
+  <div class="wrap">
+    <div class="contact">
+      <a class="hide-on-mobile" href="tel:{{ site.contact.phone }}">📞 {{ site.contact.phone }}</a>
+      <a class="hide-on-mobile" href="mailto:{{ site.contact.email }}">✉ {{ site.contact.email }}</a>
+      <span class="hide-on-tablet">📍 {{ site.contact.address }}, {{ site.contact.city }}</span>
+    </div>
+    <a class="cta-donate" href="{{ site.donations_online_url }}" target="_blank" rel="noopener noreferrer">
+      Apóyanos en nuestra campaña de donación
+    </a>
+  </div>
 </div>

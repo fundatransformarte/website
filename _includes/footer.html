@@ -1,27 +1,44 @@
-<footer id="contact">
-  <div class="container">
-    <h2>Contáctanos</h2>
-    <div class="footer-content">
-      <div class="social-media">
-        <h3>Redes Sociales</h3>
+<footer class="site" id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="name">Fundación <span class="serif-italic">TransformArte</span></div>
+        <p>Transformamos vidas a través del arte y la educación en la costa caribe colombiana.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Navegación</h4>
         <ul>
-          <li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          {% for item in site.navigation %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
         </ul>
       </div>
-      <div class="contact-information">
-        <h3>Información de Contacto</h3>
-        <p>{{ site.contact.phone }}</p>
-        <p>{{ site.contact.address }}</p>
-        <p>{{ site.contact.email }}</p>
-        <p><a href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener noreferrer">¡Escríbenos por WhatsApp!</a></p>
+
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:{{ site.contact.phone }}">{{ site.contact.phone }}</a></li>
+          <li><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+          <li>{{ site.contact.address }}</li>
+          <li>{{ site.contact.city }}</li>
+        </ul>
       </div>
-      <div class="donation">
-        <h3>Donaciones</h3>
-        <p>¡Apóyanos en nuestra campaña de donación!</p>
-        <p><a href="{{ site.donations_online_url }}" target="_blank" rel="noopener noreferrer">Donar ahora</a></p>
+
+      <div class="foot-col">
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer">Instagram →</a></li>
+          <li><a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn →</a></li>
+          <li><a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer">YouTube →</a></li>
+          <li><a href="{{ site.contact.whatsapp_url }}" target="_blank" rel="noopener noreferrer">WhatsApp →</a></li>
+        </ul>
       </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>© {{ site.time | date: '%Y' }} {{ site.title }}</div>
+      <div>{{ site.contact.city }}, Colombia</div>
     </div>
   </div>
 </footer>

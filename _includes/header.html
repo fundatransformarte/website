@@ -1,44 +1,35 @@
-<header>
-  <div class="container">
-    <div class="header-content">
-      <a href="{{ '/' | relative_url }}">
-        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo de {{ site.title }}" class="logo">
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo de {{ site.title }}">
+      <div class="brand-text">
+        <div class="name">TransformArte</div>
+        <div class="sub">Fundación Multiactiva</div>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="primary" id="main-nav">
+      {% for item in site.navigation %}
+      {% assign item_url_trailing = item.url | append: '/' %}
+      {% if page.url == item.url or page.url == item_url_trailing %}
+      <a href="{{ item.url | relative_url }}" class="nav-active" aria-current="page">{{ item.title }}</a>
+      {% else %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endif %}
+      {% endfor %}
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="{{ site.volunteer_form }}" target="_blank" rel="noopener noreferrer">Ser voluntario</a>
+      <a class="btn btn-primary" href="{{ site.donations_online_url }}" target="_blank" rel="noopener noreferrer">
+        Donar <span class="arrow">→</span>
       </a>
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav id="main-nav">
-        <ul>
-          {% for item in site.navigation %}
-          {% assign item_url_trailing = item.url | append: '/' %}
-          {% if page.url == item.url or page.url == item_url_trailing %}
-          <li><a href="{{ item.url | relative_url }}" class="nav-active" aria-current="page">{{ item.title }}</a></li>
-          {% else %}
-          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
     </div>
   </div>
 </header>
-
-<script>
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var header = document.querySelector('header');
-    btn.addEventListener('click', function () {
-      var isOpen = header.classList.toggle('nav-open');
-      btn.setAttribute('aria-expanded', isOpen);
-    });
-
-    document.querySelectorAll('#main-nav a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        header.classList.remove('nav-open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-</script>
